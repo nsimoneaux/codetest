@@ -7,7 +7,7 @@ from collections import defaultdict
 #define method and approriate argument
 def eqindex(data):
     
-    #instantiate l and h=0, and instantiate the default dictionary values in the to '0'
+    #instantiate l and h=0, and instantiate the default dictionary values to '0'
     l, h = 0, defaultdict(list)
     
     #for each index 'i' and value 'c' in list 'data'...
@@ -17,7 +17,7 @@ def eqindex(data):
         l += c
         
         #append the index 'i' to the array 'h', at the index of array 'h' where double the value of 'l' subtracting c
-        #for values of l and c where c is half of l, this will accumlate all positions of i
+        #for values of l and c where c is half of l, this will accumlate all values of i
         h[l * 2 - c].append(i)
         
     #return the value of array 'h' at the index 'l', calculated in the previous step to have accumulated all positions ('i') of the list where 'l', doubled, subtracting 'c' are equal to 'l' (equilibrium cases) 
